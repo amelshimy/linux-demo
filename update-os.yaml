@@ -1,0 +1,9 @@
+---
+- name: Update Linux RPM based 
+  hosts: all
+  become: true
+  tasks:
+    - name: Task - Remove installed package
+      ansible.builtin.dnf:
+        name: "*"
+        state: latest
