@@ -1,6 +1,6 @@
 ---
 - name: Delete user Ansible
-  hosts: "{{ rhel_inventory_group | default(all) }}"
+  hosts: all
   become: true
   tasks:
     - name: Task 1 - Delete user ansible
